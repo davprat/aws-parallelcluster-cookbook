@@ -38,7 +38,7 @@ def install_repository_configuration_package(repository_name, definition_source,
   if platform?('ubuntu')
     # dpkg_package is used here because 'package' seems to default to using apt_package
     # which fails on the MySQL package.
-    dpkg_package repository_name do
+    package repository_name do
       source local_file
     end
 
