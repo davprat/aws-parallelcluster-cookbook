@@ -3,7 +3,8 @@
     "month_first": "%b %-d %H:%M:%S",
     "default": "%Y-%m-%d %H:%M:%S,%f",
     "bracket_default": "[%Y-%m-%d %H:%M:%S]",
-    "slurm": "%Y-%m-%dT%H:%M:%S.%f"
+    "slurm": "%Y-%m-%dT%H:%M:%S.%f",
+    "metric": ""
   },
   "log_configs": [
     {
@@ -160,6 +161,96 @@
       ],
       "node_roles": [
         "HeadNode"
+      ],
+      "feature_conditions": []
+    },
+    {
+      "timestamp_format_key": "metric",
+      "file_path": "/var/log/parallelcluster/clustermgtd.metrics",
+      "log_stream_name": "pcluster_metrics",
+      "schedulers": [
+        "slurm"
+      ],
+      "platforms": [
+        "amazon",
+        "centos",
+        "redhat",
+        "ubuntu"
+      ],
+      "node_roles": [
+        "HeadNode"
+      ],
+      "feature_conditions": []
+    },
+    {
+      "timestamp_format_key": "metric",
+      "file_path": "/var/log/parallelcluster/slurm_fleet_status_manager.metrics",
+      "log_stream_name": "slurm_fleet_status.metrics",
+      "schedulers": [
+        "slurm"
+      ],
+      "platforms": [
+        "amazon",
+        "centos",
+        "redhat",
+        "ubuntu"
+      ],
+      "node_roles": [
+        "HeadNode"
+      ],
+      "feature_conditions": []
+    },
+    {
+      "timestamp_format_key": "metric",
+      "file_path": "/var/log/parallelcluster/slurm_resume.metrics",
+      "log_stream_name": "resume_metrics",
+      "schedulers": [
+        "slurm"
+      ],
+      "platforms": [
+        "amazon",
+        "centos",
+        "redhat",
+        "ubuntu"
+      ],
+      "node_roles": [
+        "HeadNode"
+      ],
+      "feature_conditions": []
+    },
+    {
+      "timestamp_format_key": "metric",
+      "file_path": "/var/log/parallelcluster/slurm_suspend.metrics",
+      "log_stream_name": "suspend_metrics",
+      "schedulers": [
+        "slurm"
+      ],
+      "platforms": [
+        "amazon",
+        "centos",
+        "redhat",
+        "ubuntu"
+      ],
+      "node_roles": [
+        "HeadNode"
+      ],
+      "feature_conditions": []
+    },
+    {
+      "timestamp_format_key": "metric",
+      "file_path": "/var/log/parallelcluster/computemgtd.metrics",
+      "log_stream_name": "computemgtd_metrics",
+      "schedulers": [
+        "slurm"
+      ],
+      "platforms": [
+        "amazon",
+        "centos",
+        "redhat",
+        "ubuntu"
+      ],
+      "node_roles": [
+        "ComputeFleet"
       ],
       "feature_conditions": []
     },

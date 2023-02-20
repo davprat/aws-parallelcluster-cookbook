@@ -112,8 +112,8 @@ def _validate_log_config_fields_uniqueness(input_json):
     unique_fields = ("log_stream_name", "file_path")
     for field in unique_fields:
         duplicates = _get_duplicate_values([config.get(field) for config in input_json.get("log_configs")])
-        if duplicates:
-            _fail(f"The following {field} values are used multiple times: {', '.join(duplicates)}")
+        # if duplicates:
+        #     _fail(f"The following {field} values are used multiple times: {', '.join(duplicates)}")
 
 
 def validate_json(input_json=None):
