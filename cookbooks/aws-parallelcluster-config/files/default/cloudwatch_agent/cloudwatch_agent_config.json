@@ -167,7 +167,7 @@
     {
       "timestamp_format_key": "metric",
       "file_path": "/var/log/parallelcluster/clustermgtd.metrics",
-      "log_stream_name": "pcluster_metrics",
+      "log_stream_name": "clustermgtd_metrics",
       "schedulers": [
         "slurm"
       ],

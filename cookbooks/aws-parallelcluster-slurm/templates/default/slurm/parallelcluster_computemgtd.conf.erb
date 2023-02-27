@@ -6,3 +6,4 @@ clustermgtd_heartbeat_file_path = <%= node['cluster']['slurm']['install_dir'] %>
 dynamodb_table = <%= node['cluster']['slurm_ddb_table'] %>
 instance_id = <%= node['ec2']['instance_id'] %>
 instance_type = <%= node['ec2']['instance_type'] %>
+availability_zone = <%= node['ec2']['availability_zone'] %>
