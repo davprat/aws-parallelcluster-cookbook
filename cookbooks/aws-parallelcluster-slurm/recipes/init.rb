@@ -27,6 +27,7 @@ end
 
 # Retrieve compute info from dynamodb and save into file
 if node['cluster']['node_type'] == "ComputeFleet"
+  require 'json'
 
   ruby_block "retrieve compute node info" do
     block do
@@ -43,6 +44,24 @@ if node['cluster']['node_type'] == "ComputeFleet"
     mode '0644'
     owner 'root'
     group 'root'
+  end
+
+  file "#{node['cluster']['slurm_plugin_dir']}/slurm_node_description.json" do
+    content(
+      lazy do
+        JSON.generate(
+          {
+            name: node['cluster']['slurm_nodename'],
+            'instance-id': node['ec2']['instance_id'],
+            'instance-type': node['ec2']['instance_type'],
+            'availability-zone': node['ec2']['availability_zone']
+          }
+        )
+      end
+    )
+    owner 'root'
+    group 'root'
+    mode '0644'
   end
 end
 
