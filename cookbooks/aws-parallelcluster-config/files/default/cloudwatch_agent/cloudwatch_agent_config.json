@@ -166,8 +166,8 @@
     },
     {
       "timestamp_format_key": "metric",
-      "file_path": "/var/log/parallelcluster/clustermgtd.metrics",
-      "log_stream_name": "clustermgtd_metrics",
+      "file_path": "/var/log/parallelcluster/clustermgtd.events",
+      "log_stream_name": "clustermgtd_events",
       "schedulers": [
         "slurm"
       ],
@@ -184,8 +184,8 @@
     },
     {
       "timestamp_format_key": "metric",
-      "file_path": "/var/log/parallelcluster/slurm_fleet_status_manager.metrics",
-      "log_stream_name": "slurm_fleet_status.metrics",
+      "file_path": "/var/log/parallelcluster/slurm_fleet_status_manager.events",
+      "log_stream_name": "slurm_fleet_status.events",
       "schedulers": [
         "slurm"
       ],
@@ -202,8 +202,8 @@
     },
     {
       "timestamp_format_key": "metric",
-      "file_path": "/var/log/parallelcluster/slurm_resume.metrics",
-      "log_stream_name": "resume_metrics",
+      "file_path": "/var/log/parallelcluster/slurm_resume.events",
+      "log_stream_name": "resume_events",
       "schedulers": [
         "slurm"
       ],
@@ -220,8 +220,8 @@
     },
     {
       "timestamp_format_key": "metric",
-      "file_path": "/var/log/parallelcluster/slurm_suspend.metrics",
-      "log_stream_name": "suspend_metrics",
+      "file_path": "/var/log/parallelcluster/slurm_suspend.events",
+      "log_stream_name": "suspend_events",
       "schedulers": [
         "slurm"
       ],
@@ -238,8 +238,8 @@
     },
     {
       "timestamp_format_key": "metric",
-      "file_path": "/var/log/parallelcluster/computemgtd.metrics",
-      "log_stream_name": "computemgtd_metrics",
+      "file_path": "/var/log/parallelcluster/computemgtd.events",
+      "log_stream_name": "computemgtd_events",
       "schedulers": [
         "slurm"
       ],
